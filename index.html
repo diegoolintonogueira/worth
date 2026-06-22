@@ -13,7 +13,6 @@
 </head>
 <body>
 
-<!-- SVG Symbols -->
 <svg style="display:none" aria-hidden="true">
   <defs>
     <symbol id="mk" viewBox="0 0 52 34">
@@ -32,14 +31,13 @@
   </defs>
 </svg>
 
-<!-- Scroll progress -->
 <div class="scroll-bar" id="scrollBar" aria-hidden="true"></div>
 
-<!-- ===================== HEADER ===================== -->
+<!-- HEADER -->
 <header class="site-header" id="siteHeader">
   <nav class="nav wrap" aria-label="Principal">
     <a class="lockup" href="#topo" aria-label="Worth — início">
-      <svg width="30" height="19" aria-hidden="true"><use href="#mk"/></svg>
+      <svg width="26" height="17" aria-hidden="true"><use href="#mk"/></svg>
       <span class="logotype"><span class="lw">w</span>orth</span>
     </a>
     <ul class="navlinks" id="navlinks" role="list">
@@ -58,24 +56,27 @@
 
 <main id="topo">
 
-  <!-- ===================== HERO ===================== -->
-  <section class="hero" aria-labelledby="hero-h1">
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-wordmark">
     <div class="hero-glow" aria-hidden="true"></div>
-    <div class="hero-watermark" aria-hidden="true">
-      <svg viewBox="0 0 52 34" fill="none" preserveAspectRatio="xMidYMid meet"><use href="#mk"/></svg>
-    </div>
+    <div class="hero-grain" aria-hidden="true"></div>
+
     <div class="wrap hero-wrap">
-      <p class="eyebrow eyebrow--dark">Rede exclusiva de empreendedores cristãos</p>
-      <h1 id="hero-h1" class="hero-title">
-        <span class="ht-plain">Walking On</span>
-        <span class="ht-accent">Righteousness</span>
-        <span class="ht-plain">Toward Heaven</span>
+      <p class="hero-eyebrow">Rede exclusiva de empreendedores cristãos</p>
+
+      <h1 class="hero-wordmark" id="hero-wordmark" aria-label="Worth">
+        <span class="hw-w">W</span><span class="hw-rest">orth</span>
       </h1>
+
+      <p class="hero-sub">Walking On Righteousness Toward Heaven</p>
+
       <p class="hero-lead">Empreendedores cristãos aliançados para compartilhar conhecimento técnico, suporte espiritual, experiência prática e oportunidades reais de crescimento — com base na Verdade, na Ética e na Excelência.</p>
+
       <div class="hero-ctas">
         <a class="btn btn-blue" href="#planos">Conhecer os planos</a>
         <a class="btn btn-ghost" href="#sobre">Como funciona</a>
       </div>
+
       <div class="hero-stats">
         <div class="hstat">
           <strong><span class="counter" data-to="175" data-suffix="M">0M</span></strong>
@@ -93,9 +94,13 @@
         </div>
       </div>
     </div>
+
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span></span>
+    </div>
   </section>
 
-  <!-- ===================== SOBRE ===================== -->
+  <!-- SOBRE -->
   <section class="sobre" id="sobre" aria-labelledby="sobre-h2">
     <div class="wrap reveal">
       <div class="sobre-grid">
@@ -130,7 +135,7 @@
     </div>
   </section>
 
-  <!-- ===================== PROPÓSITO ===================== -->
+  <!-- PROPÓSITO -->
   <section class="proposito" aria-label="Propósito">
     <div class="wrap reveal proposito-inner">
       <svg class="prop-mark" aria-hidden="true" width="44" height="29" viewBox="0 0 52 34"><use href="#mk"/></svg>
@@ -142,86 +147,80 @@
     </div>
   </section>
 
-  <!-- ===================== VALORES ===================== -->
+  <!-- VALORES -->
   <section class="valores" id="valores" aria-labelledby="valores-h2">
-    <div class="wrap reveal">
-      <div class="section-head">
+    <div class="wrap">
+      <div class="section-head reveal">
         <p class="eyebrow eyebrow--light">Nossos valores</p>
         <h2 id="valores-h2">A maior virtude<br>do homem é a verdade</h2>
       </div>
-      <div class="vgrid">
-        <article class="vcard">
-          <div class="vcard-icon">
-            <svg width="36" height="23" viewBox="0 0 52 34" aria-hidden="true"><use href="#mk"/></svg>
-          </div>
+      <div class="vgrid reveal">
+        <div class="vcard">
+          <div class="vcard-num" aria-hidden="true">01</div>
           <h3>Verdade</h3>
           <p>Tudo aquilo que produz bons frutos. A verdade é o fundamento de todas as virtudes.</p>
-        </article>
-        <article class="vcard">
-          <div class="vcard-icon">
-            <svg width="36" height="23" viewBox="0 0 52 34" aria-hidden="true"><use href="#mk"/></svg>
-          </div>
+        </div>
+        <div class="vcard">
+          <div class="vcard-num" aria-hidden="true">02</div>
           <h3>Ética</h3>
           <p>O conjunto de princípios que orientam o comportamento humano em busca da justiça, do respeito e do bem-estar coletivo.</p>
-        </article>
-        <article class="vcard">
-          <div class="vcard-icon">
-            <svg width="36" height="23" viewBox="0 0 52 34" aria-hidden="true"><use href="#mk"/></svg>
-          </div>
+        </div>
+        <div class="vcard">
+          <div class="vcard-num" aria-hidden="true">03</div>
           <h3>Excelência</h3>
           <p>A máxima expressão da verdade potencial de cada elemento da criação — nas intenções, ações, palavras e realizações.</p>
-        </article>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== PLANOS ===================== -->
+  <!-- PLANOS -->
   <section class="planos" id="planos" aria-labelledby="planos-h2">
-    <div class="wrap reveal">
-      <div class="section-head section-head--dark">
+    <div class="wrap">
+      <div class="section-head section-head--dark reveal">
         <p class="eyebrow eyebrow--dark">Como funciona</p>
         <h2 id="planos-h2">Planos de ativação</h2>
         <p class="head-sub">O modelo de adesão é progressivo: quem ativa novos membros recebe comissão recorrente sobre as assinaturas geradas por sua indicação, em dois níveis de rede.</p>
       </div>
-      <div class="plans">
+      <div class="plans reveal">
 
-        <article class="plan">
-          <div class="plan-tier">Lite</div>
-          <h3 class="plan-name">Ativação Lite</h3>
-          <div class="plan-price">R$197<span>/mês</span></div>
+        <article class="plan plan--lite">
+          <div class="plan-label">Lite</div>
+          <h3>Ativação Lite</h3>
+          <div class="plan-price"><span>R$</span>197<em>/mês</em></div>
           <ul class="plan-feats">
-            <li><svg width="15" height="15" aria-hidden="true"><use href="#check"/></svg>20% de comissão sobre ativados diretos (nível 1)</li>
-            <li><svg width="15" height="15" aria-hidden="true"><use href="#check"/></svg>5% sobre o faturamento do 2º nível da rede</li>
-            <li><svg width="15" height="15" aria-hidden="true"><use href="#check"/></svg>Acesso à plataforma digital Worth</li>
-            <li><svg width="15" height="15" aria-hidden="true"><use href="#check"/></svg>Página no diretório de empresas</li>
+            <li><svg width="18" height="18" aria-hidden="true"><use href="#check"/></svg>20% de comissão sobre ativados diretos (nível 1)</li>
+            <li><svg width="18" height="18" aria-hidden="true"><use href="#check"/></svg>5% sobre o faturamento do 2º nível da rede</li>
+            <li><svg width="18" height="18" aria-hidden="true"><use href="#check"/></svg>Acesso à plataforma digital Worth</li>
+            <li><svg width="18" height="18" aria-hidden="true"><use href="#check"/></svg>Página no diretório de empresas</li>
           </ul>
-          <a class="btn btn-ghost plan-btn" href="#cta">Quero esse plano</a>
+          <a class="btn btn-outline-ink plan-btn" href="#cta">Quero esse plano</a>
         </article>
 
         <article class="plan plan--black">
           <div class="plan-badge-top">Mais escolhido</div>
-          <div class="plan-tier plan-tier--gold">Black</div>
-          <h3 class="plan-name">Ativação Black</h3>
-          <div class="plan-price plan-price--gold">R$497<span>/mês</span></div>
+          <div class="plan-label">Black</div>
+          <h3>Ativação Black</h3>
+          <div class="plan-price"><span>R$</span>497<em>/mês</em></div>
           <ul class="plan-feats">
-            <li><svg width="15" height="15" aria-hidden="true"><use href="#check-gold"/></svg>50% de comissão sobre ativados diretos (nível 1)</li>
-            <li><svg width="15" height="15" aria-hidden="true"><use href="#check-gold"/></svg>20% sobre o faturamento do 2º nível da rede</li>
-            <li><svg width="15" height="15" aria-hidden="true"><use href="#check-gold"/></svg>Acesso prioritário a eventos presenciais</li>
-            <li><svg width="15" height="15" aria-hidden="true"><use href="#check-gold"/></svg>Página destaque no diretório de empresas</li>
-            <li><svg width="15" height="15" aria-hidden="true"><use href="#check-gold"/></svg>Acesso à Universidade Worth (em breve)</li>
+            <li><svg width="18" height="18" aria-hidden="true"><use href="#check-gold"/></svg>50% de comissão sobre ativados diretos (nível 1)</li>
+            <li><svg width="18" height="18" aria-hidden="true"><use href="#check-gold"/></svg>20% sobre o faturamento do 2º nível da rede</li>
+            <li><svg width="18" height="18" aria-hidden="true"><use href="#check-gold"/></svg>Acesso prioritário a eventos presenciais</li>
+            <li><svg width="18" height="18" aria-hidden="true"><use href="#check-gold"/></svg>Página destaque no diretório de empresas</li>
+            <li><svg width="18" height="18" aria-hidden="true"><use href="#check-gold"/></svg>Acesso à Universidade Worth (em breve)</li>
           </ul>
           <a class="btn btn-blue plan-btn" href="#cta">Quero esse plano</a>
         </article>
 
-        <article class="plan">
-          <div class="plan-tier">Pro</div>
-          <h3 class="plan-name">Ativação Pro</h3>
-          <div class="plan-price">R$297<span>/mês</span></div>
+        <article class="plan plan--pro">
+          <div class="plan-label">Pro</div>
+          <h3>Ativação Pro</h3>
+          <div class="plan-price"><span>R$</span>297<em>/mês</em></div>
           <ul class="plan-feats">
-            <li><svg width="15" height="15" aria-hidden="true"><use href="#check"/></svg>30% de comissão sobre ativados diretos (nível 1)</li>
-            <li><svg width="15" height="15" aria-hidden="true"><use href="#check"/></svg>10% sobre o faturamento do 2º nível da rede</li>
-            <li><svg width="15" height="15" aria-hidden="true"><use href="#check"/></svg>Acesso à plataforma digital Worth</li>
-            <li><svg width="15" height="15" aria-hidden="true"><use href="#check"/></svg>Página no diretório de empresas</li>
+            <li><svg width="18" height="18" aria-hidden="true"><use href="#check"/></svg>30% de comissão sobre ativados diretos (nível 1)</li>
+            <li><svg width="18" height="18" aria-hidden="true"><use href="#check"/></svg>10% sobre o faturamento do 2º nível da rede</li>
+            <li><svg width="18" height="18" aria-hidden="true"><use href="#check"/></svg>Acesso à plataforma digital Worth</li>
+            <li><svg width="18" height="18" aria-hidden="true"><use href="#check"/></svg>Página no diretório de empresas</li>
           </ul>
           <a class="btn btn-ghost plan-btn" href="#cta">Quero esse plano</a>
         </article>
@@ -230,7 +229,7 @@
     </div>
   </section>
 
-  <!-- ===================== POTENCIAL ===================== -->
+  <!-- POTENCIAL -->
   <section class="potencial" id="potencial" aria-labelledby="potencial-h2">
     <div class="wrap reveal">
       <div class="section-head">
@@ -260,7 +259,7 @@
     </div>
   </section>
 
-  <!-- ===================== PROJEÇÃO ===================== -->
+  <!-- PROJEÇÃO -->
   <section class="projecao" id="projecao" aria-labelledby="projecao-h2">
     <div class="wrap reveal">
       <div class="section-head">
@@ -300,7 +299,7 @@
     </div>
   </section>
 
-  <!-- ===================== FUNDO SOCIAL ===================== -->
+  <!-- FUNDO SOCIAL -->
   <section class="fundo" aria-label="Fundo Social Worth">
     <div class="wrap reveal">
       <div class="fundo-grid">
@@ -314,7 +313,7 @@
     </div>
   </section>
 
-  <!-- ===================== FOUNDERS ===================== -->
+  <!-- FOUNDERS -->
   <section class="founders" id="founders" aria-labelledby="founders-h2">
     <div class="wrap reveal founders-inner">
       <div class="founders-seal" aria-hidden="true">
@@ -327,7 +326,7 @@
     </div>
   </section>
 
-  <!-- ===================== CTA FINAL ===================== -->
+  <!-- CTA FINAL -->
   <section class="cta-final" id="cta" aria-labelledby="cta-h2">
     <div class="wrap reveal cta-inner">
       <p class="eyebrow eyebrow--light">Entrada por indicação</p>
@@ -342,7 +341,6 @@
 
 </main>
 
-<!-- ===================== FOOTER ===================== -->
 <footer class="site-footer" aria-label="Rodapé">
   <div class="wrap">
     <div class="footer-top">
