@@ -6,9 +6,11 @@
   <title>Worth — Walking On Righteousness Toward Heaven</title>
   <meta name="description" content="Worth é uma rede exclusiva de empreendedores cristãos, unidos pela Verdade, Ética e Excelência.">
   <link rel="icon" type="image/png" href="icon.png">
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link href="https://api.fontshare.com/v2/css?f[]=garet@400,700,800&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&family=Fraunces:ital,opsz,wght@1,40..144,300;1,40..144,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -59,13 +61,14 @@
   <!-- HERO -->
   <section class="hero" aria-labelledby="hero-wordmark">
     <div class="hero-glow" aria-hidden="true"></div>
-    <div class="hero-grain" aria-hidden="true"></div>
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="hero-grain" aria-hidden="true"></div>
 
     <div class="wrap hero-wrap">
       <p class="hero-eyebrow">Rede exclusiva de empreendedores cristãos</p>
 
       <h1 class="hero-wordmark" id="hero-wordmark" aria-label="Worth">
-        <span class="hw-w">W</span><span class="hw-rest">orth</span>
+        <span class="hw-w">w</span><span class="hw-rest">orth</span>
       </h1>
 
       <p class="hero-sub">Walking On Righteousness Toward Heaven</p>
@@ -79,7 +82,7 @@
 
       <div class="hero-stats">
         <div class="hstat">
-          <strong><span class="counter" data-to="175" data-suffix="M">0M</span></strong>
+          <strong class="counter" data-to="175" data-suffix="M">0M</strong>
           <span>cristãos no Brasil</span>
         </div>
         <div class="hstat-sep" aria-hidden="true"></div>
@@ -137,13 +140,21 @@
 
   <!-- PROPÓSITO -->
   <section class="proposito" aria-label="Propósito">
-    <div class="wrap reveal proposito-inner">
-      <svg class="prop-mark" aria-hidden="true" width="44" height="29" viewBox="0 0 52 34"><use href="#mk"/></svg>
-      <blockquote class="prop-quote">
-        <span class="prop-ldquo" aria-hidden="true">"</span>
-        Quando um filho do Reino prospera,<br>todo o Reino prospera.
-      </blockquote>
-      <p class="prop-sub">Nosso propósito é fortalecer a economia pautada nos valores do Reino, educando e capacitando pessoas para que se tornem cada vez mais influentes e bem-sucedidas em seus empreendimentos.</p>
+    <div class="wrap reveal">
+      <div class="proposito-inner">
+        <div class="prop-left">
+          <svg class="prop-mark" aria-hidden="true" width="44" height="29" viewBox="0 0 52 34"><use href="#mk"/></svg>
+          <span class="prop-kicker">Propósito</span>
+          <blockquote class="prop-quote">
+            Quando um <em>filho do Reino</em> prospera, o Reino prospera.
+          </blockquote>
+        </div>
+        <div class="prop-right">
+          <div class="prop-divider"></div>
+          <p class="prop-sub">Nosso propósito é fortalecer a economia pautada nos valores do Reino, educando e capacitando pessoas para que se tornem cada vez mais influentes e bem-sucedidas em seus empreendimentos.</p>
+          <p class="prop-sub2">A Worth existe para que cada empreendedor alinhado ao Reino não caminhe sozinho — mas em aliança, com suporte, estratégia e propósito.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -259,47 +270,58 @@
     </div>
   </section>
 
-  <!-- PROJEÇÃO -->
+    <!-- PROJEÇÃO -->
   <section class="projecao" id="projecao" aria-labelledby="projecao-h2">
     <div class="wrap reveal">
-      <div class="section-head">
-        <p class="eyebrow eyebrow--light">Projeção</p>
-        <h2 id="projecao-h2">Quanto sua rede pode gerar</h2>
-        <p class="head-sub">Cenário com 50 ativações no nível 1 e 2.500 no nível 2 — valores calculados com os planos atuais.</p>
+      <div class="section-head section-head--dark">
+        <p class="eyebrow eyebrow--dark">Projeção</p>
+        <h2 id="projecao-h2">Simule o potencial da sua rede</h2>
+        <p class="head-sub">Ajuste o número de membros em cada nível e veja quanto sua rede pode gerar mensalmente.</p>
       </div>
-      <div class="tabs" role="tablist" aria-label="Níveis de rede">
-        <button class="tab tab--on" data-panel="n1" role="tab" aria-selected="true" aria-controls="n1">Nível 1 · 50 ativados</button>
-        <button class="tab" data-panel="n2" role="tab" aria-selected="false" aria-controls="n2">Nível 2 · 2.500 ativados</button>
-      </div>
-      <div class="panel panel--on" id="n1" role="tabpanel">
-        <div class="tbl-wrap">
-          <table>
-            <thead><tr><th>Plano</th><th>Comissão</th><th>Valor por ativado</th><th>Ativados</th><th>Total a receber</th></tr></thead>
-            <tbody>
-              <tr><td>Lite</td><td class="num">20%</td><td class="num">R$39,40</td><td class="num">50</td><td class="num">R$1.970,00/mês</td></tr>
-              <tr><td>Pro</td><td class="num">30%</td><td class="num">R$89,10</td><td class="num">50</td><td class="num">R$4.455,00/mês</td></tr>
-              <tr class="tr-feat"><td>Black</td><td class="num">50%</td><td class="num">R$248,50</td><td class="num">50</td><td class="num gold">R$12.425,00/mês</td></tr>
-            </tbody>
-          </table>
+      <div class="calc-shell">
+        <div class="calc-tabs" role="tablist" aria-label="Plano base">
+          <button class="calc-tab" data-plano="lite" role="tab">Lite · R$197/mês</button>
+          <button class="calc-tab" data-plano="pro" role="tab">Pro · R$297/mês</button>
+          <button class="calc-tab active" data-plano="black" role="tab">Black · R$497/mês</button>
         </div>
-      </div>
-      <div class="panel" id="n2" role="tabpanel" hidden>
-        <div class="tbl-wrap">
-          <table>
-            <thead><tr><th>Plano</th><th>Comissão nível 2</th><th>Valor por ativado</th><th>Ativados</th><th>Total a receber</th></tr></thead>
-            <tbody>
-              <tr><td>Lite</td><td class="num">5%</td><td class="num">R$9,85</td><td class="num">2.500</td><td class="num">R$24.625,00/mês</td></tr>
-              <tr><td>Pro</td><td class="num">10%</td><td class="num">R$29,70</td><td class="num">2.500</td><td class="num">R$74.250,00/mês</td></tr>
-              <tr class="tr-feat"><td>Black</td><td class="num">20%</td><td class="num">R$99,40</td><td class="num">2.500</td><td class="num gold">R$248.500,00/mês</td></tr>
-            </tbody>
-          </table>
+        <div class="calc-body">
+          <div class="calc-main">
+            <div class="calc-controls">
+              <div class="calc-field">
+                <label for="range-n1">Membros Nível 1</label>
+                <div class="calc-val" id="val-n1">50 membros</div>
+                <input type="range" id="range-n1" min="1" max="500" value="50" step="1" aria-label="Membros nível 1">
+              </div>
+              <div class="calc-field">
+                <label for="range-n2">Membros Nível 2</label>
+                <div class="calc-val" id="val-n2">2.500 membros</div>
+                <input type="range" id="range-n2" min="0" max="25000" value="2500" step="50" aria-label="Membros nível 2">
+              </div>
+              <div class="calc-breakdown">
+                <div class="cb-row">
+                  <span>Comissão nível 1</span>
+                  <strong id="calc-r1">—</strong>
+                </div>
+                <div class="cb-sep"></div>
+                <div class="cb-row">
+                  <span>Comissão nível 2</span>
+                  <strong id="calc-r2">—</strong>
+                </div>
+              </div>
+            </div>
+            <div class="calc-hero-result">
+              <div class="chr-label">receita estimada / mês</div>
+              <div class="chr-value" id="calc-total">—</div>
+              <div class="chr-bar"><div class="chr-fill" id="calc-bar"></div></div>
+            </div>
+          </div>
         </div>
       </div>
       <p class="footnote">Valores brutos, sem a taxa de processamento de pagamento da plataforma de checkout (≈8,90% + R$2,49 por transação).</p>
     </div>
   </section>
 
-  <!-- FUNDO SOCIAL -->
+<!-- FUNDO SOCIAL -->
   <section class="fundo" aria-label="Fundo Social Worth">
     <div class="wrap reveal">
       <div class="fundo-grid">
@@ -332,7 +354,7 @@
       <p class="eyebrow eyebrow--light">Entrada por indicação</p>
       <h2 id="cta-h2">Você só chega até aqui<br>por indicação</h2>
       <p>Fale com quem te trouxe até a Worth para iniciar sua ativação e escolher seu plano.</p>
-      <a class="btn btn-blue btn-lg" href="https://wa.me/55SEUNUMERO" target="_blank" rel="noopener noreferrer">
+      <a class="btn btn-wa btn-lg" href="https://wa.me/55SEUNUMERO" target="_blank" rel="noopener noreferrer">
         <svg width="18" height="18" aria-hidden="true"><use href="#wa"/></svg>
         Falar no WhatsApp
       </a>
