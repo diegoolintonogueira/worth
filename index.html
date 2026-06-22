@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Worth — Walking On Righteousness Toward Heaven</title>
+<meta name="description" content="Worth é uma rede exclusiva de empreendedores cristãos, unidos pela Verdade, Ética e Excelência.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&family=Fraunces:ital,opsz,wght@1,40,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-950:#080A13;
+    --navy-900:#11142B;
+    --navy-800:#1B2147;
+    --blue-500:#5271FF;
+    --blue-300:#A9B6FF;
+    --gold-500:#C9A24B;
+    --gold-300:#E8D6A4;
+    --ink-900:#14151D;
+    --ink-600:#585C6B;
+    --paper:#FFFFFF;
+    --paper-soft:#F4F5FA;
+    --line:rgba(20,21,29,0.08);
+    --line-dark:rgba(255,255,255,0.12);
+    --display:'Sora',sans-serif;
+    --body:'Inter',sans-serif;
+    --mono:'IBM Plex Mono',monospace;
+    --serif:'Fraunces',serif;
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:var(--body);color:var(--ink-900);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  img,svg{max-width:100%;display:block;}
+  a{color:inherit;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;}
+  h1,h2,h3{font-family:var(--display);margin:0;letter-spacing:-0.01em;}
+  section{position:relative;padding:104px 0;overflow:hidden;}
+  @media (max-width:720px){ section{padding:68px 0;} .wrap{padding:0 20px;} }
+
+  /* brand mark + logotype */
+  .mark{flex:none;}
+  .mark .p1{stroke:var(--blue-500);}
+  .mark .p2{stroke:#fff;}
+  .mark.ink .p2{stroke:var(--ink-900);}
+  .logotype{font-family:var(--display);font-weight:800;letter-spacing:-0.01em;}
+  .logotype .w{color:var(--blue-500);}
+  .lockup{display:inline-flex;align-items:center;gap:10px;text-decoration:none;}
+
+  /* eyebrow with brand tick */
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-600);font-weight:600;display:inline-flex;align-items:center;gap:9px;}
+  .eyebrow::before{content:"";width:15px;height:10px;flex:none;background-repeat:no-repeat;background-size:contain;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 34'%3E%3Cpath d='M4 6L18 28L34 6' fill='none' stroke='%235271FF' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16 6L32 28L48 6' fill='none' stroke='%2314151D' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");}
+  .eyebrow.on-dark{color:var(--blue-300);}
+  .eyebrow.on-dark::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 34'%3E%3Cpath d='M4 6L18 28L34 6' fill='none' stroke='%235271FF' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16 6L32 28L48 6' fill='none' stroke='%23FFFFFF' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");}
+
+  /* seam divider between color blocks */
+  .seam::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:120px;height:2px;background:linear-gradient(90deg,transparent,var(--gold-500),transparent);}
+
+  /* ---------- header ---------- */
+  header.site{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(8,10,19,0.78);backdrop-filter:blur(12px);border-bottom:1px solid var(--line-dark);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;max-width:var(--maxw);margin:0 auto;}
+  .nav .logotype{font-size:19px;color:#fff;}
+  .navlinks{display:flex;gap:30px;list-style:none;margin:0;padding:0;}
+  .navlinks a{font-size:14px;color:#C7CBE0;text-decoration:none;font-weight:500;transition:color .15s;}
+  .navlinks a:hover,.navlinks a:focus-visible{color:#fff;}
+  .nav-cta{font-family:var(--body);font-weight:600;font-size:14px;background:var(--blue-500);color:#fff;padding:10px 18px;border-radius:8px;text-decoration:none;white-space:nowrap;transition:transform .15s, background .15s;}
+  .nav-cta:hover{background:#6883ff;transform:translateY(-1px);}
+  .navtoggle{display:none;background:none;border:0;color:#fff;font-size:22px;cursor:pointer;}
+  @media (max-width:860px){
+    .navlinks{position:fixed;top:62px;left:0;right:0;background:var(--navy-950);flex-direction:column;padding:18px 28px 26px;gap:18px;border-bottom:1px solid var(--line-dark);transform:translateY(-110%);transition:transform .25s ease;}
+    .navlinks.open{transform:translateY(0);}
+    .navtoggle{display:block;}
+    .nav-cta{display:none;}
+  }
+
+  /* ---------- hero ---------- */
+  .hero{background:var(--navy-950);color:#fff;padding:180px 0 116px;}
+  .hero-glow-a{position:absolute;top:-180px;left:-160px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(201,162,75,.20),transparent 70%);filter:blur(10px);}
+  .hero-glow-b{position:absolute;bottom:-220px;right:-180px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(82,113,255,.24),transparent 70%);filter:blur(10px);}
+  .hero-mark-bg{position:absolute;top:-40px;right:-60px;width:640px;opacity:.07;transform:rotate(-6deg);}
+  .hero .wrap{z-index:2;}
+  .hero-icon{margin-bottom:30px;}
+  .hero-icon svg{width:46px;}
+  .hero h1{font-size:clamp(36px,5.4vw,64px);font-weight:800;line-height:1.07;max-width:820px;color:#fff;}
+  .hero h1 span{color:var(--blue-300);}
+  .hero p.lead{font-size:clamp(16px,1.9vw,19px);color:#B9BEDB;max-width:560px;margin-top:22px;}
+  .hero-ctas{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap;}
+  .btn{display:inline-block;font-family:var(--body);font-weight:600;font-size:15px;padding:13px 26px;border-radius:9px;text-decoration:none;transition:transform .15s,background .15s,box-shadow .15s;}
+  .btn-primary{background:var(--blue-500);color:#fff;}
+  .btn-primary:hover{background:#6883ff;transform:translateY(-1px);box-shadow:0 14px 28px rgba(82,113,255,.32);}
+  .btn-ghost{border:1px solid var(--line-dark);color:#fff;}
+  .btn-ghost:hover{background:rgba(255,255,255,.08);}
+  .btn-ghost-ink{border:1px solid var(--line);color:var(--ink-900);}
+  .btn-ghost-ink:hover{background:var(--paper-soft);}
+  .hero-stats{display:flex;gap:44px;margin-top:64px;flex-wrap:wrap;border-top:1px solid var(--line-dark);padding-top:28px;}
+  .hero-stats div b{display:block;font-family:var(--mono);font-size:22px;color:#fff;}
+  .hero-stats div span{font-size:13px;color:#8A8FB0;}
+
+  /* ---------- generic section heads ---------- */
+  .head{max-width:640px;margin-bottom:48px;}
+  .head h2{font-size:clamp(28px,3.6vw,40px);margin-top:12px;font-weight:700;}
+  .on-dark .head h2{color:#fff;}
+  .head p.sub{color:var(--ink-600);font-size:16px;margin-top:14px;}
+  .on-dark .head p.sub{color:#AEB3CF;}
+
+  /* ---------- sobre ---------- */
+  .sobre{background:var(--paper);}
+  .sobre-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:start;}
+  @media (max-width:860px){.sobre-grid{grid-template-columns:1fr;}}
+  .sobre p{color:var(--ink-600);font-size:16px;margin:0 0 18px;}
+  .chips{display:flex;flex-direction:column;gap:14px;}
+  .chip{border:1px solid var(--line);border-radius:14px;padding:18px 20px;background:var(--paper-soft);}
+  .chip b{display:block;font-family:var(--display);font-size:15px;margin-bottom:4px;}
+  .chip span{font-size:13.5px;color:var(--ink-600);}
+  .callout{margin-top:22px;border-left:3px solid var(--gold-500);padding-left:16px;font-size:14.5px;color:var(--ink-600);}
+
+  /* ---------- proposito band ---------- */
+  .proposito{background:var(--navy-900);color:#fff;text-align:center;padding:96px 0;}
+  .proposito .quote-mark{font-family:var(--serif);font-size:90px;color:var(--gold-500);opacity:.55;line-height:0;display:block;margin-bottom:-10px;}
+  .proposito blockquote{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(24px,3.6vw,34px);max-width:760px;margin:0 auto 22px;line-height:1.32;}
+  .proposito p{max-width:620px;margin:0 auto;color:#AEB3CF;font-size:15.5px;}
+
+  /* ---------- valores ---------- */
+  .valores{background:var(--paper-soft);}
+  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  @media (max-width:860px){.cards3{grid-template-columns:1fr;}}
+  .vcard{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:32px 26px;transition:box-shadow .2s,transform .2s;}
+  .vcard:hover{box-shadow:0 24px 40px -24px rgba(20,21,29,.22);transform:translateY(-3px);}
+  .vmark{width:30px;height:30px;margin-bottom:18px;}
+  .vcard h3{font-size:18px;font-weight:700;margin-bottom:10px;}
+  .vcard p{font-size:14.5px;color:var(--ink-600);margin:0;}
+
+  /* ---------- planos ---------- */
+  .planos{background:var(--paper);}
+  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch;}
+  @media (max-width:860px){.plans{grid-template-columns:1fr;}}
+  .plan{border:1px solid var(--line);border-radius:20px;padding:32px 28px;display:flex;flex-direction:column;background:var(--paper);}
+  .plan .tag{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-600);}
+  .plan h3{font-size:22px;margin:8px 0 18px;}
+  .plan .price{font-family:var(--mono);font-size:34px;font-weight:600;}
+  .plan .price small{font-size:14px;font-weight:500;color:var(--ink-600);}
+  .plan ul{list-style:none;margin:22px 0 26px;padding:0;display:flex;flex-direction:column;gap:12px;}
+  .plan li{font-size:14.5px;color:var(--ink-600);padding-left:24px;position:relative;}
+  .plan li::before{content:"";position:absolute;left:0;top:3px;width:15px;height:15px;background-color:var(--blue-500);
+    -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2 8.3L6.3 12.6L14 3.2' fill='none' stroke='black' stroke-width='2.1' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2 8.3L6.3 12.6L14 3.2' fill='none' stroke='black' stroke-width='2.1' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    mask-size:contain;-webkit-mask-size:contain;mask-repeat:no-repeat;-webkit-mask-repeat:no-repeat;}
+  .plan .btn{margin-top:auto;text-align:center;}
+  .plan.featured{
+    color:#fff;border:1px solid transparent;transform:translateY(-10px);
+    box-shadow:0 36px 60px -28px rgba(8,10,19,.45);
+    background-image:linear-gradient(var(--navy-950),var(--navy-950)),linear-gradient(135deg,var(--blue-500),var(--gold-500));
+    background-origin:border-box;background-clip:padding-box,border-box;
+  }
+  .plan.featured .tag{color:var(--gold-300);}
+  .plan.featured .price small{color:#9499BD;}
+  .plan.featured li{color:#C7CBE0;}
+  .plan.featured li::before{background-color:var(--gold-500);}
+
+  /* ---------- potencial ---------- */
+  .potencial{background:var(--navy-950);color:#fff;}
+  .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:10px;}
+  @media (max-width:860px){.stat-grid{grid-template-columns:repeat(2,1fr);}}
+  .stat-grid div b{display:block;font-family:var(--mono);font-size:clamp(24px,3vw,32px);color:#fff;}
+  .stat-grid div span{font-size:13px;color:#9499BD;}
+  .potencial .footnote{margin-top:40px;color:#80859E;font-size:13.5px;max-width:680px;}
+
+  /* ---------- projecao ---------- */
+  .projecao{background:var(--paper);}
+  .tabs{display:flex;gap:8px;margin-bottom:22px;}
+  .tabbtn{font-family:var(--body);font-weight:600;font-size:14px;padding:9px 18px;border-radius:8px;border:1px solid var(--line);background:var(--paper);cursor:pointer;color:var(--ink-600);}
+  .tabbtn.active{background:var(--navy-950);color:#fff;border-color:var(--navy-950);}
+  table{width:100%;border-collapse:collapse;font-size:14.5px;}
+  thead th{text-align:left;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-600);padding:12px 14px;border-bottom:1px solid var(--line);}
+  tbody td{padding:16px 14px;border-bottom:1px solid var(--line);}
+  tbody td:first-child{font-family:var(--display);font-weight:700;}
+  tbody td.num{font-family:var(--mono);}
+  tbody tr:last-child td{font-weight:600;}
+  .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;}
+  .table-wrap table{min-width:560px;}
+  .panel{display:none;}
+  .panel.active{display:block;}
+  .projecao .footnote{margin-top:18px;font-size:13px;color:var(--ink-600);}
+
+  /* ---------- fundo social ---------- */
+  .fundo{background:var(--paper-soft);}
+  .fundo-grid{display:grid;grid-template-columns:.45fr 1fr;gap:50px;align-items:center;}
+  @media (max-width:720px){.fundo-grid{grid-template-columns:1fr;}}
+  .big-num{font-family:var(--mono);font-size:clamp(64px,10vw,110px);font-weight:600;line-height:1;background:linear-gradient(135deg,var(--gold-500),#9c7a2c);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .fundo p{color:var(--ink-600);font-size:16px;max-width:520px;}
+
+  /* ---------- founders ---------- */
+  .founders{background:var(--navy-900);color:#fff;}
+  .founders .wrap{max-width:760px;}
+  .seal{width:72px;height:72px;border-radius:50%;border:1.5px solid var(--gold-500);display:flex;align-items:center;justify-content:center;margin-bottom:26px;}
+  .seal svg{width:28px;}
+  .founders p{color:#C7CBE0;font-size:16px;margin:0 0 18px;}
+  .founders p.note{color:#8A8FB0;font-size:14.5px;}
+
+  /* ---------- cta final ---------- */
+  .cta-final{background:var(--paper);text-align:center;}
+  .cta-final .wrap{max-width:560px;}
+  .cta-final p{color:var(--ink-600);font-size:16px;margin:14px 0 30px;}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--navy-950);color:#8A8FB0;padding:50px 0 30px;}
+  .footer-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;padding-bottom:30px;border-bottom:1px solid var(--line-dark);}
+  .footer-top .logotype{color:#fff;font-size:19px;}
+  .footer-top .navlinks{position:static;background:none;flex-direction:row;padding:0;transform:none;border:none;}
+  .footer-top .navlinks a{color:#AEB3CF;}
+  .foot-bottom{display:flex;justify-content:space-between;padding-top:22px;font-size:13px;flex-wrap:wrap;gap:10px;}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1;transform:none;}
+  @media (prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none;} html{scroll-behavior:auto;}}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--blue-500);outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<svg style="display:none">
+  <symbol id="mk" viewBox="0 0 52 34">
+    <path class="p1" d="M4 6L18 28L34 6" fill="none" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path class="p2" d="M16 6L32 28L48 6" fill="none" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+<header class="site">
+  <nav class="nav">
+    <a class="lockup" href="#topo">
+      <svg class="mark" style="width:26px;height:17px;"><use href="#mk"/></svg>
+      <span class="logotype"><span class="w">w</span>orth</span>
+    </a>
+    <ul class="navlinks" id="navlinks">
+      <li><a href="#sobre">O que é</a></li>
+      <li><a href="#valores">Valores</a></li>
+      <li><a href="#planos">Planos</a></li>
+      <li><a href="#potencial">Potencial</a></li>
+      <li><a href="#founders">Founders</a></li>
+    </ul>
+    <a class="nav-cta" href="#cta">Quero ser indicado</a>
+    <button class="navtoggle" id="navtoggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  </nav>
+</header>
+
+<main id="topo">
+
+  <section class="hero">
+    <div class="hero-glow-a"></div>
+    <div class="hero-glow-b"></div>
+    <svg class="mark hero-mark-bg" style="height:auto;"><use href="#mk"/></svg>
+    <div class="wrap">
+      <div class="hero-icon"><svg class="mark"><use href="#mk"/></svg></div>
+      <p class="eyebrow on-dark">Rede exclusiva de empreendedores cristãos</p>
+      <h1>Walking On <span>Righteousness</span> Toward Heaven</h1>
+      <p class="lead">Empreendedores cristãos aliançados para compartilhar conhecimento técnico, suporte espiritual, experiência prática e oportunidades reais de crescimento — com base na Verdade, na Ética e na Excelência.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#planos">Conhecer os planos</a>
+        <a class="btn btn-ghost" href="#sobre">Como funciona</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>175M</b><span>cristãos no Brasil</span></div>
+        <div><b>100%</b><span>plataforma digital</span></div>
+        <div><b>1 indicação</b><span>é o que abre a porta</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sobre" id="sobre">
+    <div class="wrap reveal">
+      <div class="sobre-grid">
+        <div>
+          <p class="eyebrow">O que é</p>
+          <h2 style="margin-bottom:24px;">Uma aliança, não só uma rede</h2>
+          <p>A Worth é uma rede exclusiva de empreendedores cristãos que se unem para compartilhar conhecimento técnico, suporte espiritual, experiência prática e oportunidades de crescimento. Nossa missão é fortalecer negócios com base nos valores do Reino, promovendo networking de alto nível, apoio mútuo e conexões estratégicas.</p>
+          <p>Além dos encontros presenciais e online, a Worth mantém uma plataforma digital própria — um diretório de empresas confiáveis, com página dedicada para cada negócio. Em breve, uma universidade de empreendedorismo com centenas de aulas.</p>
+          <p class="callout">A entrada na rede é permitida exclusivamente por indicação, o que garante um ambiente de extrema confiança, excelência e alinhamento de propósito.</p>
+        </div>
+        <div class="chips">
+          <div class="chip"><b>Diretório de empresas</b><span>Cada negócio com sua própria página, visível para toda a rede.</span></div>
+          <div class="chip"><b>Encontros presenciais e online</b><span>Networking de alto nível entre empreendedores alinhados.</span></div>
+          <div class="chip"><b>Universidade Worth</b><span>Em breve: centenas de aulas de empreendedorismo.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="proposito reveal seam">
+    <div class="wrap">
+      <span class="quote-mark">&#8220;</span>
+      <blockquote>Quando um filho do Reino prospera, todo o Reino prospera.</blockquote>
+      <p>Nosso propósito é fortalecer a economia pautada nos valores do Reino, educando e capacitando pessoas para que se tornem cada vez mais influentes e bem-sucedidas em seus empreendimentos.</p>
+    </div>
+  </section>
+
+  <section class="valores seam" id="valores">
+    <div class="wrap reveal">
+      <div class="head">
+        <p class="eyebrow">Nossos valores</p>
+        <h2>A maior virtude do homem é a verdade</h2>
+      </div>
+      <div class="cards3">
+        <div class="vcard">
+          <svg class="vmark" viewBox="0 0 24 24" fill="none"><path d="M3 11L9 17L21 5" stroke="#5271FF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Verdade</h3>
+          <p>Tudo aquilo que produz bons frutos. A verdade é o fundamento de todas as virtudes.</p>
+        </div>
+        <div class="vcard">
+          <svg class="vmark" viewBox="0 0 24 24" fill="none"><path d="M3 11L9 17L21 5" stroke="#5271FF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Ética</h3>
+          <p>O conjunto de princípios que orientam o comportamento humano em busca da justiça, do respeito e do bem-estar coletivo.</p>
+        </div>
+        <div class="vcard">
+          <svg class="vmark" viewBox="0 0 24 24" fill="none"><path d="M3 11L9 17L21 5" stroke="#5271FF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Excelência</h3>
+          <p>A máxima expressão da verdade potencial de cada elemento da criação — nas intenções, ações, palavras e realizações.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="planos" id="planos">
+    <div class="wrap reveal">
+      <div class="head">
+        <p class="eyebrow">Como funciona</p>
+        <h2>Planos de ativação</h2>
+        <p class="sub">O modelo de adesão é progressivo: quem ativa novos membros recebe comissão recorrente sobre as assinaturas geradas por sua indicação, em dois níveis de rede.</p>
+      </div>
+      <div class="plans">
+        <div class="plan">
+          <span class="tag">Lite</span>
+          <h3>Ativação Lite</h3>
+          <div class="price">R$197<small>/mês</small></div>
+          <ul>
+            <li>20% de comissão sobre seus ativados diretos (nível 1)</li>
+            <li>5% sobre o faturamento do 2º nível da sua rede</li>
+          </ul>
+          <a class="btn btn-ghost-ink" href="#cta">Quero esse plano</a>
+        </div>
+        <div class="plan featured">
+          <span class="tag">Black · mais escolhido</span>
+          <h3>Ativação Black</h3>
+          <div class="price">R$497<small>/mês</small></div>
+          <ul>
+            <li>50% de comissão sobre seus ativados diretos (nível 1)</li>
+            <li>20% sobre o faturamento do 2º nível da sua rede</li>
+          </ul>
+          <a class="btn btn-primary" href="#cta">Quero esse plano</a>
+        </div>
+        <div class="plan">
+          <span class="tag">Pro</span>
+          <h3>Ativação Pro</h3>
+          <div class="price">R$297<small>/mês</small></div>
+          <ul>
+            <li>30% de comissão sobre seus ativados diretos (nível 1)</li>
+            <li>10% sobre o faturamento do 2º nível da sua rede</li>
+          </ul>
+          <a class="btn btn-ghost-ink" href="#cta">Quero esse plano</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="potencial seam" id="potencial">
+    <div class="wrap reveal">
+      <div class="head on-dark">
+        <p class="eyebrow on-dark">Potencial</p>
+        <h2>Uma das maiores bases cristãs do mundo</h2>
+        <p class="sub">O Brasil é o maior país cristão do mundo depois dos EUA. Um produto digital, com ticket menor e barreira de entrada baixa, muda a escala do que é possível.</p>
+      </div>
+      <div class="stat-grid">
+        <div><b>175M</b><span>cristãos no Brasil (~81% da população)</span></div>
+        <div><b>R$2,7bi</b><span>faturamento da Hinode em 2018, com 350 mil membros ativos</span></div>
+        <div><b>525.000</b><span>afiliados potenciais, considerando 0,3% dos cristãos do país</span></div>
+        <div><b>R$2,08bi/ano</b><span>projeção de faturamento da rede nesse cenário, a um ticket médio de R$330/mês</span></div>
+      </div>
+      <p class="footnote">A Worth tem produto estritamente digital, sem os custos logísticos e industriais de redes de produto físico como a Hinode — o que reduz a barreira de entrada e amplia o alcance potencial da base de afiliados ativos.</p>
+    </div>
+  </section>
+
+  <section class="projecao seam" id="projecao">
+    <div class="wrap reveal">
+      <div class="head">
+        <p class="eyebrow">Projeção</p>
+        <h2>Quanto sua rede pode gerar</h2>
+        <p class="sub">Cenário com 50 ativações no nível 1 e 2.500 no nível 2 — valores calculados com os planos atuais.</p>
+      </div>
+      <div class="tabs" role="tablist">
+        <button class="tabbtn active" data-panel="n1" role="tab" aria-selected="true">Nível 1 · 50 ativados</button>
+        <button class="tabbtn" data-panel="n2" role="tab" aria-selected="false">Nível 2 · 2.500 ativados</button>
+      </div>
+      <div class="panel active" id="n1">
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Plano</th><th>Comissão</th><th>Valor por ativado</th><th>Ativados</th><th>Total a receber</th></tr></thead>
+            <tbody>
+              <tr><td>Lite</td><td class="num">20%</td><td class="num">R$39,40</td><td class="num">50</td><td class="num">R$1.970,00/mês</td></tr>
+              <tr><td>Pro</td><td class="num">30%</td><td class="num">R$89,10</td><td class="num">50</td><td class="num">R$4.455,00/mês</td></tr>
+              <tr><td>Black</td><td class="num">50%</td><td class="num">R$248,50</td><td class="num">50</td><td class="num">R$12.425,00/mês</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="panel" id="n2">
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Plano</th><th>Comissão nível 2</th><th>Valor por ativado</th><th>Ativados</th><th>Total a receber</th></tr></thead>
+            <tbody>
+              <tr><td>Lite</td><td class="num">5%</td><td class="num">R$9,85</td><td class="num">2.500</td><td class="num">R$24.625,00/mês</td></tr>
+              <tr><td>Pro</td><td class="num">10%</td><td class="num">R$29,70</td><td class="num">2.500</td><td class="num">R$74.250,00/mês</td></tr>
+              <tr><td>Black</td><td class="num">20%</td><td class="num">R$99,40</td><td class="num">2.500</td><td class="num">R$248.500,00/mês</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="footnote">Valores brutos, sem a taxa de processamento de pagamento da plataforma de checkout (≈8,90% + R$2,49 por transação).</p>
+    </div>
+  </section>
+
+  <section class="fundo">
+    <div class="wrap reveal">
+      <div class="fundo-grid">
+        <div class="big-num">10%</div>
+        <div>
+          <p class="eyebrow">Fundo Social Worth</p>
+          <h2 style="margin:10px 0 14px;font-size:28px;">Prosperidade que volta para o mundo</h2>
+          <p>do faturamento líquido total é destinado a missões e obras de impacto social pelo mundo. Apoiamos iniciativas que educam e capacitam pessoas na construção de uma vida amplamente próspera.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="founders seam" id="founders">
+    <div class="wrap reveal">
+      <div class="seal"><svg class="mark"><use href="#mk"/></svg></div>
+      <p class="eyebrow on-dark">Founders</p>
+      <h2 style="color:#fff;margin:10px 0 22px;font-size:32px;">A base que sustenta a rede</h2>
+      <p>Os Founders Worth são a base que sustenta e impulsiona essa rede de empresários comprometidos com um propósito maior do que apenas negócios. Ser founder não é só uma posição — é um chamado para homens de oração, integridade e visão, que entendem que a Worth existe para empoderar a economia do Reino e ampliar sua influência na Terra.</p>
+      <p class="note">Founders são membros fundamentais, ouvidos e respeitados. A gestão da Worth segue liderança centralizada, para preservar a visão, os princípios e a expansão sustentável do projeto.</p>
+    </div>
+  </section>
+
+  <section class="cta-final seam" id="cta">
+    <div class="wrap reveal">
+      <p class="eyebrow">Entrada por indicação</p>
+      <h2 style="margin-top:10px;">Você só chega até aqui por indicação</h2>
+      <p>Fale com quem te trouxe até a Worth para iniciar sua ativação e escolher seu plano.</p>
+      <a class="btn btn-primary" href="https://wa.me/55SEUNUMERO" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="seam">
+  <div class="wrap">
+    <div class="footer-top">
+      <span class="lockup"><svg class="mark" style="width:26px;height:17px;"><use href="#mk"/></svg><span class="logotype"><span class="w">w</span>orth</span></span>
+      <ul class="navlinks">
+        <li><a href="#sobre">O que é</a></li>
+        <li><a href="#valores">Valores</a></li>
+        <li><a href="#planos">Planos</a></li>
+        <li><a href="#founders">Founders</a></li>
+      </ul>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Worth — Walking On Righteousness Toward Heaven</span>
+      <span>Rede exclusiva de empreendedores cristãos</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var t = document.getElementById('navtoggle'), nl = document.getElementById('navlinks');
+  t.addEventListener('click', function(){
+    var open = nl.classList.toggle('open');
+    t.setAttribute('aria-expanded', open);
+  });
+  nl.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ nl.classList.remove('open'); }); });
+
+  document.querySelectorAll('.tabbtn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.tabbtn').forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('active'); });
+      btn.classList.add('active'); btn.setAttribute('aria-selected','true');
+      document.getElementById(btn.dataset.panel).classList.add('active');
+    });
+  });
+
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
+    }, {threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+</script>
+</body>
+</html>
